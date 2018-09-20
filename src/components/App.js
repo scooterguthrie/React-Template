@@ -4,6 +4,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import './App.css';
 
+import { Header } from './header/Header';
+
 import Home from './home/Home';
 import About from './about/About';
 import Contact from './contact/Contact';
@@ -15,11 +17,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="nav">
-          <NavLink exact to="/" activeClassName="active">Home</NavLink>
-          <NavLink to="/about" activeClassName="active">About</NavLink>
-          <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-        </div>
+      <Header></Header>
         <Route render={({location}) => (
           <TransitionGroup>
             <CSSTransition
