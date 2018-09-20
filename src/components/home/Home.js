@@ -1,13 +1,22 @@
-import React from 'react';
+import React from "react";
+import { Container, Jumbotron } from 'reactstrap';
 
 const Home = () => {
-    return(
+    return (
         <div className="page">
-            <section>
-                <h1>Home</h1>
+            <Jumbotron fluid>
+                <Container fluid>
+                    <h1 className="display-3">Hello, world!</h1>
+                    <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr className="my-2" />
+                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                </Container>
+            </Jumbotron>
+            <Container fluid >
+                <h1 className="mt-4">Home</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laboriosam maiores autem nemo consectetur sed perspiciatis minus quibusdam dolorem ratione sapiente amet quia quis voluptates, earum culpa odio.</p>
-            </section>
-        </div>   
+            </Container>
+        </div>
     )
 }
 

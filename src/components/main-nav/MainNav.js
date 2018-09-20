@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, NavItem, Nav, NavbarBrand, NavbarToggler, Collapse } from 'reactstrap';
+import { Container, Navbar, NavItem, Nav, NavbarBrand, NavbarToggler, Collapse } from 'reactstrap';
 import { NavLink } from "react-router-dom";
 
 export class MainNav extends Component {
@@ -20,23 +20,25 @@ export class MainNav extends Component {
 
     render() {
         return (
-            <Navbar className="content-wrapper fixed-top" color="light" light expand="sm">
-                <NavbarBrand href="/">React Template</NavbarBrand>
-                <NavbarToggler onClick={this.toggle} />
+            <Navbar className="content-wrapper fixed-top" color="dark" dark expand="sm">
+                <Container fluid>
+                    <NavbarBrand href="/">React Template</NavbarBrand>
+                    <NavbarToggler onClick={this.toggle} />
 
-                <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/about" className="nav-link" activeClassName="active">About</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/about" className="nav-link" activeClassName="active">About</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                </Container>
             </Navbar>
         );
     }

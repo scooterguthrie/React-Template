@@ -1,0 +1,18 @@
+$footer-size: 60px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: calc(#{$footer-size} + 1.5rem);
+}
+
+.sticky-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-size;
+    line-height: $footer-size;
+}

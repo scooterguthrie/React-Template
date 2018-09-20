@@ -1,0 +1,12 @@
+.content-wrapper {
+    &.navbar {
+        min-width: $min-width;
+        padding-left: 0;
+        padding-right: 0;
+
+        .container-fluid {
+            padding-left: $navbar-padding-x;
+            padding-right: $navbar-padding-x;
+        }
+    }
+}
