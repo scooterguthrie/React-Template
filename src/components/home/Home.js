@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Jumbotron } from 'reactstrap';
+import { Container, Jumbotron, Button } from 'reactstrap';
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Container fluid >
                 <h1 className="mt-4">Home</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laboriosam maiores autem nemo consectetur sed perspiciatis minus quibusdam dolorem ratione sapiente amet quia quis voluptates, earum culpa odio.</p>
+                <NavLink to="/about" className="btn btn-primary" activeClassName="active">About</NavLink>
             </Container>
         </div>
     )
