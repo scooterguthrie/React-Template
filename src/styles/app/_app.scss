@@ -1,0 +1,17 @@
+$app-width: 1200px;
+$min-width: 320px;
+
+body {
+    min-width: $min-width;
+}
+.content-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-fluid {
+    max-width: 1200px;
+}
+
+.main-content {
+    background-color: $white;
+}
