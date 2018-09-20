@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
@@ -17,11 +18,21 @@ class App extends Component {
       <div className="App">
         <Header></Header>
         <section>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
+          <Route render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition
+                key={location.key}
+                timeout={300}
+                classNames="slide"
+              >
+                <Switch location={location}>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/about" component={About} />
+                  <Route path="/contact" component={Contact} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )} />
         </section>
         <Footer></Footer>
       </div>

@@ -16,3 +16,13 @@ body {
     height: $footer-size;
     line-height: $footer-size;
 }
+
+.fixed-footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: $footer-size;
+    line-height: $footer-size;
+    z-index: 2;
+}

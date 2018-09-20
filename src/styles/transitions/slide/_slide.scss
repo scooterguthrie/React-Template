@@ -1,0 +1,16 @@
+.page {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition-duration: 600ms;
+    overflow-x: hidden;
+}
+
+.slide-appear,
+.slide-enter {
+    transform: translate(100%);
+}
+
+.slide-exit {
+    transform: translate(-100%);
+}

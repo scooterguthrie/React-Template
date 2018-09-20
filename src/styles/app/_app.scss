@@ -3,6 +3,7 @@ $min-width: 320px;
 
 body {
     min-width: $min-width;
+    overflow-x: hidden;
 }
 .content-wrapper {
     margin-left: auto;
